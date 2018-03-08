@@ -24,21 +24,4 @@ public class MyPharmacyApplication {
 
 	}
 
-  @Bean
-  CommandLineRunner runner(MedicineService medicineService){
-    return args -> {
-      // read JSON and load json
-      ObjectMapper mapper = new ObjectMapper();
-      TypeReference<List<Medicine>> typeReference = new TypeReference<List<Medicine>>(){};
-      InputStream inputStream = TypeReference.class.getResourceAsStream("/json/Medicines.json");
-      try {
-        List<Medicine> users = mapper.readValue(inputStream,typeReference);
-        medicineService.save(users);
-        System.out.println("Users Saved!");
-      } catch (IOException e){
-        System.out.println("Unable to save users: " + e.getMessage());
-      }
-    };
-  }
-
 }
