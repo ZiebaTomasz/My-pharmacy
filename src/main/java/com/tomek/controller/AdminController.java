@@ -21,7 +21,6 @@ public class AdminController {
     this.medicineService = medicineService;
   }
 
-
   @GetMapping("/admin/edit/{id}")
   public String editMedicine(@PathVariable (value = "id")Long id, Model model) {
     model.addAttribute("medicine",medicineService.medicineById(id));

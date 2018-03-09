@@ -10,7 +10,6 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 
 @Configuration
 @EnableGlobalMethodSecurity(securedEnabled = true)
-//@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -19,9 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http
-
-            .authorizeRequests()
+        http.authorizeRequests()
           .antMatchers("/admin/**").hasRole("ADMIN")
           .anyRequest().permitAll()
           .and()
