@@ -31,7 +31,7 @@ public class AdminController {
   @PostMapping("admin/save")
   public String saveMedicine(@Valid Medicine medicine, BindingResult bindingResult){
     if (bindingResult.hasErrors()){
-      System.out.println("some error");
+      return "admin/addMedicine";
     }
     medicineService.save(medicine);
     return "redirect:/";

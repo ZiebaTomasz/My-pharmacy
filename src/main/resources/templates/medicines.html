@@ -14,10 +14,18 @@
     <table id="medicines">
       <thead>
         <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Brand</th>
-          <th>Cost</th>
+          <th>
+            <a th:text="Id" th:href="|@{/}|"></a>
+          </th>
+          <th>
+            <a th:text="Name" th:href="|@{/byName/}|"></a>
+          </th>
+          <th>
+            <a th:text="Brand" th:href="|@{/byBrand/}|"></a>
+          </th>
+          <th>
+            <a th:text="Cost" th:href="|@{/byCost/}|"></a>
+          </th>
           <th>Read More</th>
           <th>Edit</th>
           <th>Delete</th>
