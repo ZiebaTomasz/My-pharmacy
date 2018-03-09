@@ -9,15 +9,15 @@
 - Thymeleaf
 
 **To get the code:**
-Clone the repository:
+Clone the repository:  
 $ git clone git://github.com/ZiebaTomasz/My-pharmacy.git
 
-**To run the application:**
-From the command line with Maven:
-$ cd My-pharmacy
-$ mvn jetty:run 
+**To run the application:**  
+From the command line with Maven:  
+$ cd My-pharmacy  
+$ mvn jetty:run   
 
 Access the deployed web application at: http://localhost:8080/
 
-Login: admin
-Password: admin
+Login: admin  
+Password: admin  
