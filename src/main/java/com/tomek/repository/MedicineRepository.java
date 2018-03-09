@@ -10,4 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface MedicineRepository extends JpaRepository<Medicine, Long> {
 
   List<Medicine> findAll();
+
+
 }

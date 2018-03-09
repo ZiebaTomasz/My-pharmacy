@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<layout:html lang="en"
+             xmlns:th="http://www.thymeleaf.org"
+             xmlns:layout="http://www.w3.org/1999/xhtml">
+  <title></title>
+  <th:block th:include="fragments/header"></th:block>
+  </head>
+  <body>
+
+  <div>
+    <br></br>
+
+    <p th:text="${medicine.get().id}"></p>
+
+
+    <table id="medicines">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Added At</th>
+        <th>Description</th>
+        <th>Number of servings</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!--<tr th:each="medicine ">-->
+        <tr>
+        <td th:text="${medicine.get().id}"></td>
+        <td th:text="${medicine.get().getName()}"></td>
+        <td th:text="${medicine.get().getBrand()}"></td>
+        <td th:text="${#dates.format(medicine.get().getAddedAt(),'dd MM yyyy')}"></td>
+        <td th:text="${medicine.get().getDescription()}"></td>
+        <td th:text="${medicine.get().getNumberOfServings()}"></td>
+        <!--<td>-->
+        <!--<a th:text="Click" th:href="|@{/medicine/}${medicine.id}|"></a>-->
+        <!--</td>-->
+
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <!--<div th:replace="fragments/footer :: footer"/>-->
+  </body>
+</layout:html>
+

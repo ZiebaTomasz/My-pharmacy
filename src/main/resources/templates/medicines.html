@@ -2,43 +2,53 @@
 <layout:html lang="en"
              xmlns:th="http://www.thymeleaf.org"
              xmlns:layout="http://www.w3.org/1999/xhtml">
-  <!--<head th:replace="layouts/layout :: head">-->
-
     <title></title>
-    <style type="text/css">
-      table.tab {
-        border-width: 2px;
-        border-color: black;
-        margin: auto;
-        border-collapse: collapse;
-        width: 600px;
-        border-bottom-width: medium;
-      }
-    </style>
+  <th:block th:include="fragments/header"></th:block>
   </head>
   <body>
+
+
   <div>
     <br></br>
 
-    <table>
+    <table id="medicines">
       <thead>
         <tr>
           <th>Id</th>
           <th>Name</th>
           <th>Brand</th>
           <th>Cost</th>
+          <th>Read More</th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
         <tr th:each="medicine : ${medicines}">
           <td th:text="${medicine.id}"></td>
           <td th:text="${medicine.getName()}"></td>
+          <td th:text="${medicine.getBrand()}"></td>
           <td th:text="${medicine.getCost()}"></td>
+          <td>
+            <a th:text="readMore" th:href="|@{/medicine/}${medicine.id}|"></a>
+          </td>
+
+          <td>
+            <a th:text="edit" th:href="|@{/medicine/edit/}${medicine.id}|"></a>
+          </td>
+
+          <td>
+            <a th:text="delete" th:href="|@{/admin/delete/}${medicine.id}|"></a>
+          </td>
+
+
         </tr>
       </tbody>
     </table>
 
   </div>
+
+  <!--<div th:replace="fragments/footer :: footer"/>-->
   </body>
 </layout:html>
 

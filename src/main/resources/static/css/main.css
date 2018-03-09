@@ -1,0 +1,40 @@
+#medicines{
+  margin: 5px;
+  width: 290px;
+}
+table {
+  margin: 5px;
+  width: 290px;
+}
+
+th {
+  padding: 3px;
+}
+
+td {
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid #990000;
+  background-color: #ffffcc;
+}
+
+#trHeader {
+  text-decoration: underline;
+  color: #990000;
+}
+
+.centerCell {
+  text-align: center;
+}
+
+h1{
+  color:#0000FF;
+}
+
+h2{
+  color:#FF0000;
+}
+
+footer{
+  margin-top:60px;
+}
