@@ -49,12 +49,7 @@ public class HomeController {
   @GetMapping("/byCost")
   public String getallPostsByCost(Model model){
     List<Medicine> medicineSortedList = medicineService.listOfMedicines();
-    medicineSortedList.sort(new java.util.Comparator<Medicine>() {
-      @Override
-      public int compare(Medicine med1, Medicine med2) {
-        return (int) (med1.getCost() - med2.getCost());
-      }
-    });
+    medicineSortedList.sort((med1, med2) -> (int) (med1.getCost() - med2.getCost()));
     model.addAttribute("medicines",medicineSortedList);
     return "medicines";
   }
@@ -63,7 +58,6 @@ public class HomeController {
   public String login(){
     return "login/login";
   }
-
 
   @GetMapping("/medicine/{id}")
   public String detailMedicine(@PathVariable(value = "id")Long id, Model model){

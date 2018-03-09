@@ -1,8 +1,8 @@
 package com.tomek;
 
-    import com.fasterxml.jackson.core.type.TypeReference;
-    import com.fasterxml.jackson.databind.ObjectMapper;
-    import com.tomek.domain.Medicine;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.tomek.domain.Medicine;
     import com.tomek.service.MedicineService;
     import java.io.IOException;
     import java.io.InputStream;
@@ -15,12 +15,11 @@ package com.tomek;
     import org.springframework.context.annotation.Bean;
     import org.springframework.stereotype.Component;
     import sun.misc.IOUtils;
-
-    @Component
+@Component
 public class DataLoader {
 
   @Bean
-  CommandLineRunner runner(MedicineService medicineService){
+  public CommandLineRunner runner(MedicineService medicineService){
     return args -> {
       // read JSON and load json
       ObjectMapper mapper = new ObjectMapper();

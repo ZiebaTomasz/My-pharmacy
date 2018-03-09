@@ -41,19 +41,4 @@ class MedicineTest {
     assertEquals(medicine.getBrand(),expectedBrand);
   }
 
-  @Test
-  void getDescription() {
-  }
-
-  @Test
-  void getCost() {
-  }
-
-  @Test
-  void getNumberOfServings() {
-  }
-
-  @Test
-  void getAddedAt() {
-  }
 }
