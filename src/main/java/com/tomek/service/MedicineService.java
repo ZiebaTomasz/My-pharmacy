@@ -16,7 +16,7 @@ public class MedicineService {
     this.medicineRepository = medicineRepository;
   }
 
-  public Iterable<Medicine> listOfMedicines(){
+  public List<Medicine> listOfMedicines(){
     return medicineRepository.findAll();
   }
 

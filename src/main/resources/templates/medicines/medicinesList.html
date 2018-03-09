@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<layout:html lang="en"
+             xmlns:th="http://www.thymeleaf.org"
+             xmlns:layout="http://www.w3.org/1999/xhtml">
+  <!--<head th:replace="layouts/layout :: head">-->
+
+    <title></title>
+    <style type="text/css">
+      table.tab {
+        border-width: 2px;
+        border-color: black;
+        margin: auto;
+        border-collapse: collapse;
+        width: 600px;
+        border-bottom-width: medium;
+      }
+    </style>
+  </head>
+  <body>
+  <div>
+    <br></br>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="medicine : ${medicines}">
+          <td th:text="${medicine.id}"></td>
+          <td th:text="${medicine.getName()}"></td>
+          <td th:text="${medicine.getCost()}"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  </body>
+</layout:html>
+

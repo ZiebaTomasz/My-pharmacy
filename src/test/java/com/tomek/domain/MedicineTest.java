@@ -30,7 +30,7 @@ class MedicineTest {
 
   @Test
   void getName() {
-    String exprectedName = "Calcium";
+    String exprectedName = "Caloium";
     assertNotEquals(medicine.getName(),exprectedName);
     assertTrue(medicine.getName().equalsIgnoreCase(exprectedName));
   }
