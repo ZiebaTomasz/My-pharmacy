@@ -15,7 +15,7 @@ $ git clone git://github.com/ZiebaTomasz/My-pharmacy.git
 **To run the application:**  
 From the command line with Maven:  
 $ cd My-pharmacy  
-$ mvn jetty:run   
+$ mvn spring-boot:run  
 
 Access the deployed web application at: http://localhost:8080/
 
